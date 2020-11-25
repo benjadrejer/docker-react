@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -f Dockerfile.dev -t zirelion/docker-react .
+  - docker build -f Dockerfile.prod -t zirelion/docker-react .
 
 script:
   - docker run -e CI=true zirelion/docker-react npm run test
